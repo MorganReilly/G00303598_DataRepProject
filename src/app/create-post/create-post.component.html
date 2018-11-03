@@ -1,0 +1,29 @@
+<div class="container">
+
+  <h1>| Exercise Input |</h1>
+
+  <form (ngSubmit)="onSubmit()" #exerciseForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
+      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+        Name is required
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="type">Type</label>
+      <select class="form-control" id="type" required [(ngModel)]="model.type" name="type">
+        <option *ngFor="let type of type" [value]="type">{{type}}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!exerciseForm.form.valid">Submit!</button>
+  </form>
+  <br>
+  <button type="button" class="btn btn-default" (click)="newExercise();exerciseForm.reset()">New Exercise</button>
+
+  <br>
+  TODO: remove this: {{diagnostic}}
+</div>
