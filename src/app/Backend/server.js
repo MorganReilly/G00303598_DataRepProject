@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 
 //Connection String
 const mongoDB = 'mongodb://MReilly:MReilly123@ds249873.mlab.com:49873/g00303598_project_datarep';
-mongoose.connect(mongoDB);
+mongoose.connect(mongoDB, { useNewUrlParser: true });
 
 //Define scheme of how data will be stored
 let Schema = mongoose.Schema;
@@ -33,7 +33,7 @@ app.use(function (req, res, next) {
 });
 
 //Post request - post 'name' & 'type' to db
-app.post('/api/posts',function(req,res,err){
+app.post('/api/posts', function (req, res, err) {
     //prepare response in json format
     response = {
         name: req.body.name,
@@ -47,8 +47,8 @@ app.post('/api/posts',function(req,res,err){
     postModel.create({
         name: req.body.name,
         type: req.body.type
-    }, function(err, postModel) {
-        if(err) return handleError(err);
+    }, function (err, postModel) {
+        if (err) return handleError(err);
         //Saved!
     });
 })
@@ -61,7 +61,7 @@ app.get('/api/posts', function (req, res) {
         if (err)
             res.send(err);
         //Found - return as json
-        res.status(200).json( posts)//End res.status.json
+        res.status(200).json(posts)//End res.status.json
     })//End .find
 })//End GET REQUEST
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ExerciseList } from '../exercise-list';
 import { NgForm } from "@angular/forms";
-import {PostService} from '../post.service';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-create-post',
@@ -10,7 +10,7 @@ import {PostService} from '../post.service';
 })
 export class CreatePostComponent implements OnInit {
 
-  constructor(private service:PostService) { }
+  constructor(private service: PostService) { }
 
   type = ['Push', 'Pull', 'Legs'];
   submitted = false;
