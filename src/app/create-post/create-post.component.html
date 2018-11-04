@@ -2,7 +2,7 @@
 
   <h1>| Exercise Input |</h1>
 
-  <form (ngSubmit)="onSubmit()" #exerciseForm="ngForm">
+  <form (ngSubmit)="onAddPost(postForm)" #exerciseForm="ngForm">
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
