@@ -1,8 +1,31 @@
-<ul>
+<!-- <ul>
   <li *ngFor="let p of posts">
 
     <p>{{p.name}}</p>
     <p>{{p.type}}</p>
-</ul>
+</ul> -->
+
+<mat-toolbar color="primary">| Exercise List |</mat-toolbar>
+<mat-accordion multi="true" *ngIf="posts.length > 0">
+  <mat-expansion-panel [expanded]="false" *ngFor="let post of posts">
+      <mat-expansion-panel-header>
+          Plan Name: {{ post.name }}
+        </mat-expansion-panel-header>
+        <p>Exercise Name: {{ post.type }}</p>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<!--
+<mat-nav-list>
+  <mat-list-item *ngFor="let post of posts">
+    {{post.type}}:
+    {{post.name}}
+  </mat-list-item>
+</mat-nav-list>
+-->
 
 TODO: nicer list with subheaders for main 3 lift types
+<br>
+
+TODO: create pipe function to filter each subtype then do the above 3 times with the pipe
+filters for each type

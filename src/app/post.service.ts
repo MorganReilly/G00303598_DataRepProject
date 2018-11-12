@@ -20,8 +20,8 @@ export class PostService {
     return [...this.posts];
   }
 
-  addPost(name: string, type: string): Observable<any> {
-    const post: Post = {name: name, type: type};
+  addPost(name: string, type: string, description: string, setRange: string, repRange: string): Observable<any> {
+    const post: Post = {name: name, type: type, description: description, setRange: setRange, repRange: repRange};
     return this.http.post("http://localhost:8081/api/posts",post);
   }
 }

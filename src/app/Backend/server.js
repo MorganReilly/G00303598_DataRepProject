@@ -16,7 +16,10 @@ let Schema = mongoose.Schema;
 //Store posts sent to db
 let postSchema = new Schema({
     name: String,
-    type: String
+    type: String,
+    description: String,
+    setRange: String,
+    repRange: String
 });
 
 //Use schema to build model
@@ -27,6 +30,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS");
     res.header("Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept");
     next();
@@ -34,10 +38,14 @@ app.use(function (req, res, next) {
 
 //Post request - post 'name' & 'type' to db
 app.post('/api/posts', function (req, res, err) {
+    console.log("POST METHOD CALLED");
     //prepare response in json format
     response = {
         name: req.body.name,
-        type: req.body.type
+        type: req.body.type,
+        description: req.body.description,
+        setRange: req.body.setRange,
+        repRange: req.body.repRange
     };
 
     console.log(response);
@@ -46,7 +54,10 @@ app.post('/api/posts', function (req, res, err) {
     //Create post to be delivered to mLabDB
     postModel.create({
         name: req.body.name,
-        type: req.body.type
+        type: req.body.type,
+        description: req.body.description,
+        setRange: req.body.setRange,
+        repRange: req.body.repRange
     }, function (err, postModel) {
         if (err) return handleError(err);
         //Saved!
@@ -55,6 +66,7 @@ app.post('/api/posts', function (req, res, err) {
 
 //GET + FIND REQUEST - Reads a file by title or id from your db in your node/express server
 app.get('/api/posts', function (req, res) {
+    console.log("GET METHOD CALLED");
     //Finding everything in database 
     postModel.find(function (err, posts) {
         //If not found - send an error

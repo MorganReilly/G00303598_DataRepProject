@@ -7,18 +7,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { DetailsPostComponent } from './details-post/details-post.component';
 
-import { MatInputModule,
+import {
+  MatInputModule,
   MatMenuModule,
   MatCardModule,
   MatButtonModule,
   MatIconModule,
   MatToolbarModule,
-  MatExpansionModule} from '@angular/material';
+  MatCheckboxModule,
+  MatExpansionModule
+} from '@angular/material';
+
 import { SearchPostComponent } from './search-post/search-post.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
+
+import { MatListModule } from '@angular/material/list';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -42,7 +49,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatToolbarModule,
     MatExpansionModule,
-    MatMenuModule
+    MatMenuModule,
+    MatListModule,
+    MatCheckboxModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
