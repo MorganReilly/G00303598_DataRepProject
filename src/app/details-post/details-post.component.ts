@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {PostService} from '../post.service';
-import { Observable } from 'rxjs';
-import {Post} from '../post.model';
 
 @Component({
   selector: 'app-details-post',
@@ -18,6 +16,19 @@ export class DetailsPostComponent implements OnInit {
     this.ps.getPostsData().subscribe(data => {
       this.posts = data;
     });
+  }
+
+  //Code to MODIFY
+  onModify(id: String) {
+    console.log("onModify(): \nID: " + id);
+
+    //Call method from post service - basic way
+    //When get data back
+    this.ps.deletePost(id).subscribe(() => {
+      //Refresh list
+      this.ngOnInit();
+    });
+
   }
 
 }

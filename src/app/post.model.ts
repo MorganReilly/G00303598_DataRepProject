@@ -4,5 +4,4 @@ export interface Post {
     description: string;
     setRange: string;
     repRange: string;
-
 }

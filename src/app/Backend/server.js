@@ -77,6 +77,19 @@ app.get('/api/posts', function (req, res) {
     })//End .find
 })//End GET REQUEST
 
+//DELETE
+//:id <- identifies parameter
+app.delete('/api/posts/:id', function (req, res) {
+    console.log("DELETE POST");
+    console.log(req.params.id);
+
+    postModel.deleteOne({ _id: req.params.id },
+        //Call back funciton - once deleted this is called
+        function (err, data) {
+            res.send(data);
+        })
+})
+
 var server = app.listen(8081, function () {
     var host = server.address().address
     var port = server.address().port
