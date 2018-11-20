@@ -9,7 +9,7 @@
       <p>{{post.description}}</p>
 
       <mat-action-row>
-        <button mat-button color="primary">MODIFY</button>
+        <button mat-button [routerLink]="['/edit', post._id]" color="primary">MODIFY</button>
         <button mat-button (click)="onModify(post._id)" color="warn">REMOVE</button>
       </mat-action-row>
     </mat-expansion-panel>

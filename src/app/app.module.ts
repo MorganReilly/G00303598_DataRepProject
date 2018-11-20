@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     CreatePostComponent,
     DetailsPostComponent,
     SearchPostComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,

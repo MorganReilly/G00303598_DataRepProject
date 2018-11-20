@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ExerciseList } from '../exercise-list';
 import { NgForm } from "@angular/forms";
 import { PostService } from '../post.service';
@@ -10,7 +11,7 @@ import { PostService } from '../post.service';
 })
 export class CreatePostComponent implements OnInit {
 
-  constructor(private service: PostService) { }
+  constructor(private service: PostService, private router: Router) { }
 
   type = ['Push', 'Pull', 'Leg'];
   submitted = false;
@@ -43,7 +44,11 @@ export class CreatePostComponent implements OnInit {
     console.log("setRange:" + this.model.setRange);
     console.log("repRange:" + this.model.repRange);
 
-    this.service.addPost(this.model.name, this.model.type, this.model.description, this.model.setRange, this.model.repRange).subscribe();
+    this.service.addPost(this.model.name, this.model.type,
+      this.model.description, this.model.setRange, this.model.repRange).subscribe(() => {
+        //When the button is pressed changed to the display all page
+        this.router.navigate(['/details']);
+      });
 
     //console.log(form.value);
     //form.resetForm();

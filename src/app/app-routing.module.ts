@@ -4,13 +4,15 @@ import { CreatePostComponent } from './create-post/create-post.component';
 import { DetailsPostComponent } from './details-post/details-post.component';
 import { SearchPostComponent } from './search-post/search-post.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 const appRoutes: Routes = [
-  { path: 'create', component: CreatePostComponent },
-  { path: 'details', component: DetailsPostComponent },
   { path: '', component: DetailsPostComponent },
+  { path: 'create', component: CreatePostComponent },
+  { path: 'details', component: DetailsPostComponent },  
   { path: 'search', component: SearchPostComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: 'edit/:id', component: EditPostComponent },
+  { path: '**', component: PageNotFoundComponent }  
 ];
 
 @NgModule({

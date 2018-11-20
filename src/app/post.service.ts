@@ -10,6 +10,7 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
+  //used for retrieving data
   getPostsData(): Observable<any> {
     return this.http.get("http://localhost:8081/api/posts");
   }
@@ -22,14 +23,25 @@ export class PostService {
 
   //Used for adding to db
   addPost(name: string, type: string, description: string, setRange: string, repRange: string): Observable<any> {
-    const post: Post = {name: name, type: type, description: description, setRange: setRange, repRange: repRange};
-    return this.http.post("http://localhost:8081/api/posts",post);
+    const post: Post = { name: name, type: type, description: description, setRange: setRange, repRange: repRange };
+    return this.http.post("http://localhost:8081/api/posts", post);
   }
 
   //used for deleting from db
-  deletePost(id: String): Observable<any>{
+  deletePost(id: String): Observable<any> {
     console.log("deletePost() called");
     //Add unique id to end of post to identify document
-    return this.http.delete("http://localhost:8081/api/posts/"+id);
+    return this.http.delete("http://localhost:8081/api/posts/" + id);
+  }
+
+  //Used for retriving post id to edit
+  editPost(id: String): Observable<any> {
+    return this.http.get("http://localhost:8081/api/posts/" + id)
+  }
+
+  //Used for updating info after retrieval
+  updatePost(id: string, name: string, type: string, description: string, setRange: string, repRange: string): Observable<any> {
+    const post: Post = { name: name, type: type, description: description, setRange: setRange, repRange: repRange };
+    return this.http.put("http://localhost:8081/api/posts/" + id, post);
   }
 }

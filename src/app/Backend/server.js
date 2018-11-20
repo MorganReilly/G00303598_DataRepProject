@@ -77,10 +77,41 @@ app.get('/api/posts', function (req, res) {
     })//End .find
 })//End GET REQUEST
 
+//GET REQ USED FOR EDIT
+app.get('/api/posts/:id', function (req, res) {
+    console.log("GET METHOD CALLED (USED FOR EDIT)");
+    console.log("DB ID: ", req.params.id);
+
+    postModel.findById(req.params.id, function (err, data) {
+        res.json(data);
+    });
+})
+
+//PUT METHOD USED TO PUT UPDATES BACK TO SERVER
+app.put('/api/posts/:id', function (req, res) {
+    console.log("PUT METHOD CALLED");
+    console.log(req.params.id);
+    response = {
+        name: req.body.name,
+        type: req.body.type,
+        description: req.body.description,
+        setRange: req.body.setRange,
+        repRange: req.body.repRange
+    };
+
+    console.log(response);
+
+    postModel.findByIdAndUpdate(req.params.id, req.body, function (err, data) {
+        if (err)
+            res.send(err);
+        res.send(data);
+    });
+})
+
 //DELETE
 //:id <- identifies parameter
 app.delete('/api/posts/:id', function (req, res) {
-    console.log("DELETE POST");
+    console.log("DELETE METHOD CALLED");
     console.log(req.params.id);
 
     postModel.deleteOne({ _id: req.params.id },
