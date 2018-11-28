@@ -18,7 +18,6 @@ import {
   MatExpansionModule
 } from '@angular/material';
 
-import { SearchPostComponent } from './search-post/search-post.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { FormsModule } from "@angular/forms";
@@ -33,7 +32,6 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     AppComponent,
     CreatePostComponent,
     DetailsPostComponent,
-    SearchPostComponent,
     PageNotFoundComponent,
     EditPostComponent
   ],

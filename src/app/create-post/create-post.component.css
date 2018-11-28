@@ -1,0 +1,31 @@
+.container{
+    /* background-color: black; */
+    border-color: blueviolet;
+    padding-top: 10px;
+    border-radius: 50px;
+    /* border: 2px solid #73AD21; */
+    width: 65%;
+}
+
+.toolbar{
+    margin-top: 10px;
+    font-size: 40px;
+    border-radius: 50px;
+    border: 3px solid #73AD21;
+    border-color: blueviolet;
+    background-color: bisque;
+    opacity: .9;
+}
+
+.card{
+    margin-top: 20px;
+    border-radius: 50px;
+    border: 3px solid rgb(25, 192, 150);
+    background-color: bisque;
+    opacity: .9;
+}
+
+.form-group{
+    background-color: bisque;
+    font-size: 17px;
+}

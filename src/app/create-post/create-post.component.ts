@@ -26,7 +26,7 @@ export class CreatePostComponent implements OnInit {
   };
 
   //Content displayed on page when loaded again is pulled from here
-  model = new ExerciseList(this.basicModel.name, this.type[0], this.basicModel.message, this.setRange[4], this.repRange[4]);
+  model = new ExerciseList('', this.type[0], '', this.setRange[4], this.repRange[4]);
 
   newExercise() {
     this.model = new ExerciseList('', '', '', '', '');
@@ -55,6 +55,10 @@ export class CreatePostComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  getUrl(){
+   // return "url('../../assets/img/clean.jpg')";
   }
 
 }

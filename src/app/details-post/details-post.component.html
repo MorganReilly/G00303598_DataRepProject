@@ -1,14 +1,15 @@
-<mat-toolbar color="black">| Exercise List |</mat-toolbar>
-<mat-card>
+<div class="container">
+<mat-toolbar class="toolbar">| Exercise List |</mat-toolbar>
+<mat-card class="card">
   <mat-accordion multi="true" *ngIf="posts.length > 0">
-    <mat-expansion-panel [expanded]="false" *ngFor="let post of posts">
+    <mat-expansion-panel [expanded]="true" *ngFor="let post of posts" class="item">
       <mat-expansion-panel-header>
         <h4>{{ post.name }}: {{post.setRange}} x {{post.repRange}}</h4>
       </mat-expansion-panel-header>
       <p>Type of exercise: {{ post.type }}</p>
       <p>{{post.description}}</p>
 
-      <mat-action-row>
+      <mat-action-row class="row">
         <button mat-button [routerLink]="['/edit', post._id]" color="primary">MODIFY</button>
         <button mat-button (click)="onModify(post._id)" color="warn">REMOVE</button>
       </mat-action-row>
@@ -16,3 +17,4 @@
   </mat-accordion>
   <p class="info-text mat-body-1" *ngIf="posts.length <= 0"><a href="./create">No posts added yet! Click here to get started!</a>
 </mat-card>`
+</div>

@@ -1,0 +1,33 @@
+.mainNavBar{
+    background-image: url('../assets/img/header.jpg');
+    background-size: 50%;
+}
+
+.titleA{
+    -webkit-text-stroke: 1px black;
+    color: white;
+    font-size: 45px;
+    /* color: yellow; */
+}
+
+.titleB{
+    -webkit-text-stroke: 1px black;
+    color: white;
+    font-size: 45px;
+    padding-left: 250px;
+    /* color: yellow; */
+}
+
+.subRow{
+    -webkit-text-stroke: 1px black;
+    color: white;
+    /* border: 3px solid blueviolet; */
+}
+
+.button{
+    font-size: 23px;
+}
+
+button:hover{
+    background-color: yellow;
+}
