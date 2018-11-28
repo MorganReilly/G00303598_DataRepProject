@@ -10,18 +10,19 @@
 .toolbar{
     margin-top: 10px;
     font-size: 40px;
-    border-radius: 50px;
+    border-radius: 15px;
     border: 3px solid #73AD21;
     border-color: blueviolet;
-    background-color: bisque;
+    background-color: #e1eae7;
+    padding-left: 160px;
     opacity: .9;
 }
 
 .card{
     margin-top: 20px;
-    border-radius: 50px;
+    border-radius: 15px;
     border: 3px solid rgb(25, 192, 150);
-    background-color: bisque;
+    background-color: #e1eae7;
     opacity: .9;
 }
 
@@ -30,6 +31,25 @@
     background-color: white;
 }
 
+h4{
+    font-size: 25px;
+}
+
 .row{
     border-top: 3px solid black;
+}
+
+.buttonA{
+    /* border: 3px solid blueviolet; */
+    margin-right: 250px;
+}
+
+.buttonB{
+    /* border: 3px solid blueviolet; */
+    margin-right: 68px;
+}
+
+button:hover{
+    background-color: teal;
+    color: white;
 }
