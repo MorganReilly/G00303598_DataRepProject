@@ -16,6 +16,7 @@
     background-color: #e1eae7;
     opacity: .9;
     padding-left: 35%;
+    font-family: UmbaSoft-SCBoldDemo;
 }
 
 .card{
@@ -31,18 +32,12 @@
     font-size: 20px;
 }
 
-/* messcode, maybe delete? */
-/* textarea{
-   
-    /* This ruins default border */
-    /* background: url(../../assets/img/snatch.png) center center no-repeat; */
-    /* background-size: 100%;
-    -webkit-text-stroke: 1px black;
-    color: yellow;
-    
-} */
-
 button:hover{
     background-color: teal;
     color: white;
+}
+
+@font-face{
+    font-family: UmbaSoft-SCBoldDemo;
+    src: url(../../assets/fonts/UmbaSoft-SCBoldDemo.otf);
 }

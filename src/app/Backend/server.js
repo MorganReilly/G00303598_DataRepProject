@@ -6,8 +6,12 @@ let bodyParser = require('body-parser');
 //Connect to mongoDB
 const mongoose = require('mongoose');
 
+//DB Connection
+let username = 'MReilly';
+let password = 'MReilly123';
+let dbName = 'g00303598_project_datarep';
 //Connection String
-const mongoDB = 'mongodb://MReilly:MReilly123@ds249873.mlab.com:49873/g00303598_project_datarep';
+const mongoDB = 'mongodb://' + username + ':' + password + '@ds249873.mlab.com:49873/' + dbName;
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 
 //Define scheme of how data will be stored

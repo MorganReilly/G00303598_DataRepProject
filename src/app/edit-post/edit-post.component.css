@@ -4,7 +4,7 @@
     padding-top: 10px;
     border-radius: 50px;
     /* border: 2px solid #73AD21; */
-    width: 60%;
+    width: 50%;
 }
 
 .toolbar{
@@ -16,6 +16,7 @@
     background-color: #e1eae7;
     opacity: .9;
     padding-left: 33%;
+    font-family: UmbaSoft-SCBoldDemo;
 }
 
 .card{
@@ -37,4 +38,9 @@ button{
 button:hover{
     background-color: teal;
     color: white;
+}
+
+@font-face{
+    font-family: UmbaSoft-SCBoldDemo;
+    src: url(../../assets/fonts/UmbaSoft-SCBoldDemo.otf);
 }
