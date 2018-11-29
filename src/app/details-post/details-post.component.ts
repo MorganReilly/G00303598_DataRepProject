@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PostService} from '../post.service';
+import { PostService } from '../post.service';
+import { ExerciseList } from '../exercise-list';
 
 @Component({
   selector: 'app-details-post',
@@ -10,7 +11,7 @@ export class DetailsPostComponent implements OnInit {
 
   posts: any = [];
 
-  constructor(private ps:PostService) { }
+  constructor(private ps: PostService) { }
 
   ngOnInit() {
     this.ps.getPostsData().subscribe(data => {
@@ -30,5 +31,4 @@ export class DetailsPostComponent implements OnInit {
     });
 
   }
-
 }

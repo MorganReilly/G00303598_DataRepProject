@@ -4,7 +4,7 @@
     padding-top: 10px;
     border-radius: 50px;
     /* border: 2px solid #73AD21; */
-    width: 60%;
+    width: 50%;
 }
 
 .toolbar{
@@ -15,7 +15,7 @@
     border-color: blueviolet;
     background-color: #e1eae7;
     opacity: .9;
-    padding-left: 225px;
+    padding-left: 35%;
 }
 
 .card{
@@ -29,4 +29,20 @@
 .form-group{
     background-color: e1eae7;
     font-size: 20px;
+}
+
+/* messcode, maybe delete? */
+/* textarea{
+   
+    /* This ruins default border */
+    /* background: url(../../assets/img/snatch.png) center center no-repeat; */
+    /* background-size: 100%;
+    -webkit-text-stroke: 1px black;
+    color: yellow;
+    
+} */
+
+button:hover{
+    background-color: teal;
+    color: white;
 }

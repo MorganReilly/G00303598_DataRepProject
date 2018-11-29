@@ -1,0 +1,21 @@
+.container{
+    color: white;
+} 
+
+h1{
+    font-size: 60px;
+}
+
+h3{
+    font-size: 150%;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    background-color: yellow;
+    color: black;
+}
+

@@ -15,7 +15,7 @@
     border-color: blueviolet;
     background-color: #e1eae7;
     opacity: .9;
-    padding-left: 200px;
+    padding-left: 33%;
 }
 
 .card{
@@ -29,4 +29,12 @@
 .form-group{
     background-color: e1eae7;
     font-size: 20px;
+}
+button{
+    background-color: #42A948;
+}
+
+button:hover{
+    background-color: teal;
+    color: white;
 }

@@ -4,7 +4,7 @@
     padding-top: 10px;
     border-radius: 50px;
     /* border: 2px solid #73AD21; */
-    width: 50%;
+    width: 40%;
 }
 
 .toolbar{
@@ -14,7 +14,7 @@
     border: 3px solid #73AD21;
     border-color: blueviolet;
     background-color: #e1eae7;
-    padding-left: 160px;
+    padding-left: 33%;
     opacity: .9;
 }
 
@@ -41,15 +41,32 @@ h4{
 
 .buttonA{
     /* border: 3px solid blueviolet; */
-    margin-right: 250px;
+    margin-right: 60%;
 }
 
 .buttonB{
     /* border: 3px solid blueviolet; */
-    margin-right: 68px;
+    margin-right: 10%;
 }
 
 button:hover{
+    background-color: teal;
+    color: white;
+}
+
+.info-text{
+    font-size: 20px;
+}
+
+.text{
+    font-size: 20px;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
     background-color: teal;
     color: white;
 }
