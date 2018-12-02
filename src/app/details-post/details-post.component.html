@@ -8,7 +8,7 @@
       </mat-expansion-panel-header>
       <p class="text">Type of exercise: {{ post.type }}</p>
       <p class="text">{{post.description}}</p>
-      <button class="buttonC" mat-button color="primary"><a href="https://www.google.ie/search?q={{post.name}}" target="_blank">FIND INFO</a></button>
+      <a href="https://www.google.ie/search?q={{post.name}}" target="_blank"><button class="buttonC" mat-button color="primary" >FIND INFO</button></a>
 
       <mat-action-row class="row">
         <button class="buttonA" mat-button [routerLink]="['/edit', post._id]" color="primary">MODIFY</button>

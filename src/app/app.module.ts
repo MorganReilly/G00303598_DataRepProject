@@ -33,7 +33,7 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     CreatePostComponent,
     DetailsPostComponent,
     PageNotFoundComponent,
-    EditPostComponent
+    EditPostComponent,
   ],
   imports: [
     BrowserModule,

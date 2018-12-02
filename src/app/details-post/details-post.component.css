@@ -14,9 +14,9 @@
     border: 3px solid #73AD21;
     border-color: blueviolet;
     background-color: #e1eae7;
-    padding-left: 32%;
+    padding-left: 31%;
     opacity: .9;
-    font-family: UmbaSoft-SCBoldDemo;
+    /* font-family: UmbaSoft-SCBoldDemo; */
 }
 
 .card{
